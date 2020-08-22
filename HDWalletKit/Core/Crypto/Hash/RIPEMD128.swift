@@ -148,7 +148,7 @@ struct RIPEMD128 {
         HH(&bb, cc, &dd, aa, X[12],  5)
         
         /* round 4 */
-        II(&&aa, bb, &cc, dd, X[ 1], 11)
+        II(&aa, bb, &cc, dd, X[ 1], 11)
         II(&dd, aa, &bb, cc, X[ 9], 12)
         II(&cc, dd, &aa, bb, X[11], 14)
         II(&bb, cc, &dd, aa, X[10], 15)
@@ -167,22 +167,22 @@ struct RIPEMD128 {
         
         
         /* parallel round 1 */
-        JJJ(&aaa, bbb, &ccc, ddd, X [ 5],  8)
-        JJJ(&ddd, aaa, &bbb, ccc, X[14],  9)
-        JJJ(&ccc, ddd, &aaa, bbb, X[ 7],  9)
-        JJJ(&bbb, ccc, &ddd, aaa, X[ 0], 11)
-        JJJ(&aaa, bbb, &ccc, ddd, X[ 9], 13)
-        JJJ(&ddd, aaa, &bbb, ccc, X[ 2], 15)
-        JJJ(&ccc, ddd, &aaa, bbb, X[11], 15)
-        JJJ(&bbb, ccc, &ddd, aaa, X[ 4],  5)
-        JJJ(&aaa, bbb, &ccc, ddd, X[13],  7)
-        JJJ(&ddd, aaa, &bbb, ccc, X[ 6],  7)
-        JJJ(&ccc, ddd, &aaa, bbb, X[15],  8)
-        JJJ(&bbb, ccc, &ddd, aaa, X[ 8], 11)
-        JJJ(&aaa, bbb, &ccc, ddd, X[ 1], 14)
-        JJJ(&ddd, aaa, &bbb, ccc, X[10], 14)
-        JJJ(&ccc, ddd, &aaa, bbb, X[ 3], 12)
-        JJJ(&bbb, ccc, &ddd, aaa, X[12],  6)
+        FFF(&aaa, bbb, &ccc, ddd, X [ 5],  8)
+        FFF(&ddd, aaa, &bbb, ccc, X[14],  9)
+        FFF(&ccc, ddd, &aaa, bbb, X[ 7],  9)
+        FFF(&bbb, ccc, &ddd, aaa, X[ 0], 11)
+        FFF(&aaa, bbb, &ccc, ddd, X[ 9], 13)
+        FFF(&ddd, aaa, &bbb, ccc, X[ 2], 15)
+        FFF(&ccc, ddd, &aaa, bbb, X[11], 15)
+        FFF(&bbb, ccc, &ddd, aaa, X[ 4],  5)
+        FFF(&aaa, bbb, &ccc, ddd, X[13],  7)
+        FFF(&ddd, aaa, &bbb, ccc, X[ 6],  7)
+        FFF(&ccc, ddd, &aaa, bbb, X[15],  8)
+        FFF(&bbb, ccc, &ddd, aaa, X[ 8], 11)
+        FFF(&aaa, bbb, &ccc, ddd, X[ 1], 14)
+        FFF(&ddd, aaa, &bbb, ccc, X[10], 14)
+        FFF(&ccc, ddd, &aaa, bbb, X[ 3], 12)
+        FFF(&bbb, ccc, &ddd, aaa, X[12],  6)
         
         /* parallel round 2 */
         III(&aaa, bbb, &ccc, ddd, X[ 6],  9)

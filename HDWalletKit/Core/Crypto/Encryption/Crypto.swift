@@ -66,7 +66,7 @@ public final class Crypto {
         return try ECDSA.secp256k1.verifySignature(signature, message: sighash, publicKeyData: pubKeyData)
     }
     
-    public static func ripremd128(_ data: Data) -> Data {
+    public static func ripemd128(_ data: Data) -> Data {
         return RIPEMD128.hash(data)
     }
 }
